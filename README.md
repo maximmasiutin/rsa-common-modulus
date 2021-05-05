@@ -1,5 +1,5 @@
 # rsa-common-modulus
-A Python 3 script to describe the RSA Common Modulus Attack. Supports various output formats (Base64, decimal, etc.)
+A Python 3 script to describe the RSA Common Modulus Attack. Supports various output formats.
 
 The RSA Common Modulus Attack can be explained the following way.
 If a single plaintext has been encrypted to two ciphertexts 
