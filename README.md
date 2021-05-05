@@ -1,10 +1,10 @@
 # rsa-common-modulus
 A Python 3 script to describe the RSA Common Modulus Attack. Supports various output formats (Base64, decimal, etc.)
 
-The RSA Common Modulus Attack can be described as follows.
+The RSA Common Modulus Attack can be explained the following way.
 If a single plaintext has been encrypted to two ciphertexts 
 by private keys that have have same modulus but different exponent,
-this plaintext can be recovered if gcd(e1, e2) = 1 and gcd(ct2, n)=1
+this plaintext can be recovered if `gcd(e1, e2) = 1` and `gcd(ct2, n)=1`.
 
 This is a script originally written by Andreas Pogiatzis in 2018
 <https://infosecwriteups.com/rsa-attacks-common-modulus-7bdb34f331a5>
