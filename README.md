@@ -8,6 +8,7 @@ this plaintext can be recovered if `gcd(e1, e2) = 1` and `gcd(ct2, n)=1`.
 
 This is a script originally written by Andreas Pogiatzis in 2018
 <https://infosecwriteups.com/rsa-attacks-common-modulus-7bdb34f331a5>
+
 Maxim Masiutin ported this script in 2021 to Python 3 and added the option to configure output format,
 and the code to check that the plaintexts from both decrypted messages to be the same.
 
