@@ -13,6 +13,7 @@ Maxim Masiutin ported this script in 2021 to Python 3 and added the option to co
 and the code to check that the plaintexts from both decrypted messages to be the same.
 
 Copyright 2018 Andreas Pogiatzis
+
 Copyright 2021 Maxim Masiutin
 
 ```
