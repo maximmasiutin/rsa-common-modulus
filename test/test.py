@@ -5,24 +5,11 @@
 # You can just execute the produced output
 
 import sys
-import math
 
-from gmpy2 import is_prime
-
-
-def modinv(a, b):
-    return pow(a, -1, b)
-
-
-def call_lcm(a, b):
-    if "lcm" in dir(math):
-        return math.lcm(a, b)
-    else:
-        return abs(a * b) // math.gcd(a, b)
-
+from gmpy2 import is_prime, lcm, gcd, invert
 
 def test_e(arg_e, arg_lam, arg_n):
-    if arg_e <= 1 or arg_e >= arg_lam or arg_e >= arg_n or math.gcd(arg_e, arg_n) != 1:
+    if arg_e <= 1 or arg_e >= arg_lam or arg_e >= arg_n or gcd(arg_e, arg_n) != 1:
         print("Invalid e!")
         sys.exit(1)
 
@@ -57,13 +44,13 @@ def main():
 
     pm1 = p - 1
     qm1 = q - 1
-    lam = call_lcm(pm1, qm1)
+    lam = lcm(pm1, qm1)
     e1 = 3
     e2 = 65537
     test_e(e1, lam, n)
     test_e(e2, lam, n)
-    d1 = modinv(e1, lam)
-    d2 = modinv(e2, lam)
+    d1 = invert(e1, lam)
+    d2 = invert(e2, lam)
 
     # produce ciphertexts
     if plaintext_len_bits > modulus_len_bits:

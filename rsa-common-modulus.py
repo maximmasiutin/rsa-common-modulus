@@ -34,6 +34,7 @@ parser.add_argument("-of", "--outputformat", type=str, choices=["decimal", "hex"
 def modinv(a, m):
     return pow(a, -1, m)
 
+
 def attack(c1, c2, e1, e2, N):
     g = gcd(e1, e2)
     if g != 1:
