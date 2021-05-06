@@ -8,6 +8,7 @@ import secrets
 from gmpy2 import is_prime, invert
 from gmpy2 import gcd as gmpy2_gcd
 from gmpy2 import version as gmpy2_version
+from gmpy2 import powmod as gmpy2_powmod
 
 
 def egcd(a, b):
@@ -122,12 +123,30 @@ def main():
     end_m_gcd = time.time()
     elapsed_m_gcd = end_m_gcd - start_m_gcd
 
+    start_g_pow = time.time()
+    for i in range(counter):
+        m2 = gmpy2_powmod(c, d, n)
+    end_g_pow = time.time()
+    elapsed_g_pow = end_g_pow - start_g_pow
+
+    start_m_pow = time.time()
+    for i in range(counter):
+        m2 = pow(c, d, n)
+    end_m_pow = time.time()
+    elapsed_m_pow = end_m_pow - start_m_pow
+
+
+
     print("modinv egcd:", elapsed_egcd)
     print(" modinv pow:", elapsed_pow)
     print("modinv gmpy:", elapsed_gmpy)
 
     print("gcd gmpy:", elapsed_g_gcd)
     print("gcd math:", elapsed_m_gcd)
+
+    print("pow gmpy:", elapsed_g_pow)
+    print("pow math:", elapsed_m_pow)
+
 
     print("gmpy2 version:", gmpy2_version())
     print("Python version:", sys.version)
