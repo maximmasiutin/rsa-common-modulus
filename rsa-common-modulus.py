@@ -20,29 +20,13 @@ from math import gcd
 
 parser = argparse.ArgumentParser(description="RSA Common modulus attack")
 required_named = parser.add_argument_group("required named arguments")
-required_named.add_argument(
-    "-n", "--modulus", help="Common modulus", type=int, required=True
-)
-required_named.add_argument(
-    "-e1", "--e1", help="First exponent", type=int, required=True
-)
-required_named.add_argument(
-    "-e2", "--e2", help="Second exponent", type=int, required=True
-)
-required_named.add_argument(
-    "-ct1", "--ct1", help="First ciphertext", type=int, required=True
-)
-required_named.add_argument(
-    "-ct2", "--ct2", help="Second ciphertext", type=int, required=True
-)
+required_named.add_argument("-n", "--modulus", help="Common modulus", type=int, required=True)
+required_named.add_argument("-e1", "--e1", help="First exponent", type=int, required=True)
+required_named.add_argument("-e2", "--e2", help="Second exponent", type=int, required=True)
+required_named.add_argument("-ct1", "--ct1", help="First ciphertext", type=int, required=True)
+required_named.add_argument("-ct2", "--ct2", help="Second ciphertext", type=int, required=True)
 parser.add_argument("-q", "--quiet", action="store_true")
-parser.add_argument(
-    "-of",
-    "--outputformat",
-    type=str,
-    choices=["decimal", "hex", "base64", "quoted", "ascii", "utf-8", "raw"],
-    default="quoted",
-)
+parser.add_argument("-of", "--outputformat", type=str, choices=["decimal", "hex", "base64", "quoted", "ascii", "utf-8", "raw"], default="quoted")
 
 
 def egcd(a, b):
