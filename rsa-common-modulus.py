@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# This program requires Python 3.8 or later
+
 # The RSA Common Modulus Attack can be described as follows.
 # If a single plaintext has been encrypted to two ciphertexts
 # by private keys that have have same modulus but different exponent,
@@ -29,22 +31,8 @@ parser.add_argument("-q", "--quiet", action="store_true")
 parser.add_argument("-of", "--outputformat", type=str, choices=["decimal", "hex", "base64", "quoted", "ascii", "utf-8", "raw"], default="quoted")
 
 
-def egcd(a, b):
-    if a == 0:
-        return (b, 0, 1)
-    else:
-        g, y, x = egcd(b % a, a)
-        return (g, x - (b // a) * y, y)
-
-
 def modinv(a, m):
-    g, x, y = egcd(a, m)
-    if g != 1:
-        print("Modular inverse does not exist!", file=sys.stderr)
-        sys.exit(1)
-    else:
-        return x % m
-
+    return pow(a, -1, m)
 
 def attack(c1, c2, e1, e2, N):
     g = gcd(e1, e2)
