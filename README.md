@@ -17,12 +17,13 @@ Copyright 2021 Maxim Masiutin
 
 ```
 ./rsa-common-modulus.py --help
-usage: rsa-common-modulus.py [-h] -n MODULUS -e1 E1 -e2 E2 -ct1 CT1 -ct2 CT2 [-of {decimal,hex,base64,quoted,ascii,utf-8,raw}]
+usage: rsa-common-modulus.py [-h] -n MODULUS -e1 E1 -e2 E2 -ct1 CT1 -ct2 CT2 [-q] [-of {decimal,hex,base64,quoted,ascii,utf-8,raw}]
 
 RSA Common modulus attack
 
 optional arguments:
   -h, --help            show this help message and exit
+  -q, --quiet
   -of {decimal,hex,base64,quoted,ascii,utf-8,raw}, --outputformat {decimal,hex,base64,quoted,ascii,utf-8,raw}
 
 required named arguments:
