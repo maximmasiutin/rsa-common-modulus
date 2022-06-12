@@ -16,10 +16,10 @@
 # Copyright 2021 Maxim Masiutin
 
 # References:
-1. John M. Delaurentis "A further weakness in the common modulus protocol for the RSA cryptoalgorithm", Cryptologia (1984), vol. 8, nr. 3, pag. 253-259, doi 10.1080/0161-118491859060, Taylor & Francis;
-2. Wen-Guey Tzeng "Common modulus and chosen-message attacks on public-key schemes with linear recurrence relations", Information Processing Letters (1999), vol. 70, Issue 3, Pages 153-156, ISSN 0020-0190, 
-3. Hinek, M. and Charles C. Y. Lam. "Common modulus attacks on small private exponent RSA and some fast variants (in practice)." J. Math. Cryptol. (2010);
-4. Andreas Pogiatzis "RSA Attacks: Common Modulus" <https://infosecwriteups.com/rsa-attacks-common-modulus-7bdb34f331a5> InfoSec Write-ups (2018).
+# 1. John M. Delaurentis "A further weakness in the common modulus protocol for the RSA cryptoalgorithm", Cryptologia (1984), vol. 8, nr. 3, pag. 253-259, doi 10.1080/0161-118491859060, Taylor & Francis;
+# 2. Wen-Guey Tzeng "Common modulus and chosen-message attacks on public-key schemes with linear recurrence relations", Information Processing Letters (1999), vol. 70, Issue 3, Pages 153-156, ISSN 0020-0190, 
+# 3. Hinek, M. and Charles C. Y. Lam. "Common modulus attacks on small private exponent RSA and some fast variants (in practice)." J. Math. Cryptol. (2010);
+# 4. Andreas Pogiatzis "RSA Attacks: Common Modulus" <https://infosecwriteups.com/rsa-attacks-common-modulus-7bdb34f331a5> InfoSec Write-ups (2018).
 
 
 import argparse
