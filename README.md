@@ -3,7 +3,7 @@ A Python 3 script to describe the RSA Common Modulus Attack.
 Supports various output formats.
 
 The RSA Common Modulus Attack can be explained in the following way.
-If a single plaintext has been encrypted to two ciphertexts by private 
+If a single plaintext has been encrypted to two ciphertexts by
 keys with the same modulus but different exponent, this plaintext 
 can be recovered if  `gcd(e1, e2) = 1` and `gcd(ct2, n)=1`.
 
