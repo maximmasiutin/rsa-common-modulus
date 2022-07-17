@@ -13,6 +13,8 @@ This is a script originally written by Andreas Pogiatzis in 2018
 Maxim Masiutin ported this script in 2021 to Python 3 and added the option to configure the output format,
 and the code to check that the plaintexts from both decrypted messages to be the same.
 
+This cript can be used as a CTF (capture the flag) tool.
+
 Copyright 2018 Andreas Pogiatzis
 
 Copyright 2021 Maxim Masiutin
